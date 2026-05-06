@@ -1,0 +1,7 @@
+# sql/athena_queries.sql
+
+SELECT * FROM processed_data;
+
+SELECT city, COUNT(*) 
+FROM processed_data 
+GROUP BY city;
