@@ -53,10 +53,6 @@ SELECT city, COUNT(*) FROM processed_data GROUP BY city;
 * Used small dataset (<10MB)
 * Designed for AWS Free Tier
 
-## 📸 Screenshots
-
-(Add screenshots of S3, Glue, Athena here)
-
 ## 👨‍💻 Author
 
 GitHub: https://github.com/logeshDE
