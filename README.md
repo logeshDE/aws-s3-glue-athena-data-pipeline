@@ -54,5 +54,4 @@ SELECT city, COUNT(*) FROM processed_data GROUP BY city;
 * Designed for AWS Free Tier
 
 ## 👨‍💻 Author
-
 GitHub: https://github.com/logeshDE
