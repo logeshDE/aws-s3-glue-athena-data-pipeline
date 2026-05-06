@@ -1,0 +1,14 @@
+# scripts/glue_etl.py
+
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, upper
+
+spark = SparkSession.builder.appName("ETL Job").getOrCreate()
+
+df = spark.read.option("header", "true").csv("s3://your-bucket/raw/")
+
+df_clean = df.fillna({"age": 0}) \
+             .withColumn("name", upper(col("name"))) \
+             .withColumn("city", upper(col("city")))
+
+df_clean.write.mode("overwrite").parquet("s3://your-bucket/processed/")
